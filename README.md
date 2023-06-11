@@ -47,45 +47,50 @@ This will start the FastAPI development server, and the application will be acce
 ## Register User
 - URL: `/register`
 - Method: POST
-Description: Register a new user.
-Request Body:
-username (string): The username of the user.
-email (string): The email address of the user.
-password (string): The password of the user.
-Response:
-message (string): A success message.
-access_token (object): An access token object containing the generated access token and token type.
-Login User
-URL: /login
-Method: POST
-Description: Log in an existing user.
-Request Body:
-username (string): The username of the user.
-password (string): The password of the user.
-Response:
-message (string): A success message.
-access_token (object): An access token object containing the generated access token and token type.
-Create Project
-URL: /projects
-Method: POST
-Description: Create a new project.
-Authorization: Bearer token (obtained from login or register)
-Request Body:
-title (string): The title of the project.
-description (string): The description of the project.
-Response:
-Returns the created project object.
-Get Project
-URL: /projects/{project_id}
-Method: GET
-Description: Get details of a specific project.
-Authorization: Bearer token (obtained from login or register)
-Path Parameters:
-project_id (integer): The ID of the project.
-Response:
-Returns the project object if found.
-Delete Project
-URL: /projects/{project_id}
-Method: DELETE
-Description: Delete a specific project.
-Authorization: Bearer token (obtained from login or
+<<<<<<< HEAD
+- Description: Register a new user.
+- Request Body:
+  - username (string): The username of the user.
+  - email (string): The email address of the user.
+  - password (string): The password of the user.
+- Response:
+  - message (string): A success message.
+  - access_token (object): An access token object containing the generated access token and token type.
+## Login User
+- URL: /login
+- Method: POST
+- Description: Log in an existing user.
+- Request Body:
+  - username (string): The username of the user.
+  - password (string): The password of the user.
+- Response:
+  - message (string): A success message.
+  - access_token (object): An access token object containing the generated access token and token type.
+## Create Project
+- URL: /projects
+- Method: POST
+- Description: Create a new project.
+- Authorization: Bearer token (obtained from login or register)
+- Request Body:
+  - title (string): The title of the project.
+  - description (string): The description of the project.
+- Response:
+  - Returns the created project object.
+## Get Project
+- URL: /projects/{project_id}
+- Method: GET
+- Description: Get details of a specific project.
+- Authorization: Bearer token (obtained from login or register)
+- Path Parameters:
+  - project_id (integer): The ID of the project.
+- Response:
+  - Returns the project object if found.
+## Delete Project
+- URL: /projects/{project_id}
+- Method: DELETE
+- Description: Delete a specific project.
+- Authorization: Bearer token (obtained from login or register)
+- Path Parameters:
+  - project_id (integer): The ID of the project.
+- Response:
+- Returns a message confirming the deletion of the project.
